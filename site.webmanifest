@@ -1,0 +1,19 @@
+{
+    "name": "GRIP Climbing Club",
+    "short_name": "GRIP",
+    "description": "Muro de Escalada en Calarcá, Quindío. Para todo el Eje Cafetero.",
+    "lang": "es-CO",
+    "start_url": "/grip-climbing-club/",
+    "scope": "/grip-climbing-club/",
+    "display": "standalone",
+    "background_color": "#0B0E13",
+    "theme_color": "#0B0E13",
+    "icons": [
+        {
+            "src": "assets/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}
