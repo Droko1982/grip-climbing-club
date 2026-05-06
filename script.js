@@ -8,6 +8,24 @@
     const $ = (sel, ctx = document) => ctx.querySelector(sel);
     const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
+    /* ----- Theme toggle ----- */
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const next = isLight ? 'dark' : 'light';
+            if (next === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+            try { localStorage.setItem('grip-theme', next); } catch (e) {}
+            // Update theme-color meta for mobile chrome
+            const meta = document.querySelector('meta[name="theme-color"]:not([media])');
+            if (meta) meta.setAttribute('content', next === 'light' ? '#FAFBFC' : '#0B0E13');
+        });
+    }
+
     /* ----- Mobile menu ----- */
     const navToggle = $('#navToggle');
     const navMenu   = $('#navMenu');
