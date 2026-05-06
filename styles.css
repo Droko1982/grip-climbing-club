@@ -1561,7 +1561,17 @@ summary::-webkit-details-marker { display: none; }
     }
     .nav__menu.open { transform: translateY(0); }
     .nav__menu a { font-size: 16px; padding: 8px 0; width: 100%; }
-    .nav__cta { align-self: stretch; text-align: center; margin-top: 8px; }
+    .nav__menu .nav__tools {
+        width: 100%;
+        margin-top: 12px;
+        gap: 10px;
+    }
+    .nav__menu .nav__tools .nav__cta {
+        flex: 1;
+        text-align: center;
+        justify-content: center;
+        padding: 12px 22px !important;
+    }
     .nav__toggle { display: flex; }
 
     .section { padding: 70px 0; }
