@@ -45,6 +45,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google.com">
     <link rel="dns-prefetch" href="https://www.instagram.com">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preload" as="style" href="styles.css">
@@ -238,6 +240,7 @@
             <a href="#porque">¿Por qué GRIP?</a>
             <a href="#precios">Precios</a>
             <a href="#primera-vez">Tu primera vez</a>
+            <a href="#galeria">Galería</a>
             <a href="#horarios">Horarios</a>
             <a href="#ubicacion">Ubicación</a>
             <a href="#faq">FAQ</a>
@@ -296,23 +299,30 @@
             </div>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
-            <div class="wall">
-                <div class="wall__hold wall__hold--1"></div>
-                <div class="wall__hold wall__hold--2"></div>
-                <div class="wall__hold wall__hold--3"></div>
-                <div class="wall__hold wall__hold--4"></div>
-                <div class="wall__hold wall__hold--5"></div>
-                <div class="wall__hold wall__hold--6"></div>
-                <div class="wall__hold wall__hold--7"></div>
-                <div class="wall__hold wall__hold--8"></div>
-                <div class="wall__climber">
-                    <svg viewBox="0 0 100 140" width="100" height="140">
-                        <!-- silhouette of a climber -->
-                        <circle cx="50" cy="20" r="10" fill="#0B0E13"/>
-                        <path d="M50 30 Q45 50 35 60 L25 70 Q22 75 28 78 L40 70 Q50 65 50 80 L48 110 Q44 125 38 135 L48 138 L55 115 L62 138 L72 135 Q66 120 62 110 L60 80 Q60 65 70 70 L82 78 Q88 75 85 70 L75 60 Q65 50 60 35 Q55 30 50 30 Z" fill="#0B0E13"/>
-                    </svg>
-                </div>
+        <div class="hero__visual">
+            <div class="hero__photo hero__photo--secondary" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1696105539018-a73a53770934?w=600&q=80&auto=format&fit=crop"
+                     alt=""
+                     loading="eager"
+                     decoding="async"
+                     width="400" height="500">
+            </div>
+            <div class="hero__photo hero__photo--main">
+                <img src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=900&q=85&auto=format&fit=crop"
+                     srcset="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=500&q=80&auto=format&fit=crop 500w,
+                             https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=900&q=85&auto=format&fit=crop 900w,
+                             https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=1300&q=85&auto=format&fit=crop 1300w"
+                     sizes="(max-width: 720px) 90vw, 480px"
+                     alt="Escaladora en acción sobre muro de bouldering con presas de colores"
+                     loading="eager"
+                     fetchpriority="high"
+                     decoding="async"
+                     width="900" height="1100">
+                <div class="hero__photo-overlay" aria-hidden="true"></div>
+                <span class="hero__photo-tag">
+                    <span class="dot"></span>
+                    Escalada en acción
+                </span>
             </div>
         </div>
     </div>
@@ -328,19 +338,34 @@
         <div class="section__visual">
             <div class="card-stack">
                 <div class="card-stack__item card-stack__item--1">
-                    <span>🧗</span>
-                    <p>Boulder</p>
-                    <small>Sin cuerda · 4m</small>
+                    <img src="https://images.unsplash.com/photo-1689775884478-9ed19b79d659?w=500&q=80&auto=format&fit=crop"
+                         alt="Escalador en boulder sobre presas de colores"
+                         loading="lazy" decoding="async"
+                         width="400" height="500">
+                    <div class="card-stack__caption">
+                        <p>Boulder</p>
+                        <small>Sin cuerda</small>
+                    </div>
                 </div>
                 <div class="card-stack__item card-stack__item--2">
-                    <span>🏔️</span>
-                    <p>Top-Rope</p>
-                    <small>Con cuerda · alto</small>
+                    <img src="https://images.unsplash.com/photo-1696105538782-7815474f28e0?w=500&q=80&auto=format&fit=crop"
+                         alt="Escalador entrenando sobre volúmenes del muro"
+                         loading="lazy" decoding="async"
+                         width="400" height="500">
+                    <div class="card-stack__caption">
+                        <p>Top-Rope</p>
+                        <small>Con cuerda</small>
+                    </div>
                 </div>
                 <div class="card-stack__item card-stack__item--3">
-                    <span>💪</span>
-                    <p>Entrenamiento</p>
-                    <small>Fuerza · técnica</small>
+                    <img src="https://images.unsplash.com/photo-1659666287295-7da26c3f80d4?w=500&q=80&auto=format&fit=crop"
+                         alt="Vista del muro con presas multicolor"
+                         loading="lazy" decoding="async"
+                         width="400" height="500">
+                    <div class="card-stack__caption">
+                        <p>Entrenamiento</p>
+                        <small>Fuerza · técnica</small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -575,6 +600,94 @@
     </div>
 </section>
 
+<!-- ===== GALLERY ===== -->
+<section class="section section--gallery" id="galeria" aria-labelledby="galeria-title">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Galería</span>
+            <h2 class="section__title" id="galeria-title">
+                El muro en <span class="text-gradient">acción</span>
+            </h2>
+            <p class="section__lead">Imágenes que reflejan la experiencia de escalar. Para fotos del muro real, síguenos en <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener">@murodeescaladagrip</a>.</p>
+        </div>
+
+        <div class="gallery">
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item gallery__item--lg" aria-label="Vista del muro de escalada · Ver Instagram">
+                <img src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=900&q=80&auto=format&fit=crop"
+                     alt="Escaladora en bouldering"
+                     loading="lazy" decoding="async"
+                     width="900" height="1100">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    Ver más
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item" aria-label="Muro con presas coloridas · Ver Instagram">
+                <img src="https://images.unsplash.com/photo-1659666287295-7da26c3f80d4?w=600&q=80&auto=format&fit=crop"
+                     alt="Muro de escalada con presas de muchos colores"
+                     loading="lazy" decoding="async"
+                     width="600" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    Ver más
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item" aria-label="Detalle de presas · Ver Instagram">
+                <img src="https://images.unsplash.com/photo-1517599652-86163851f0de?w=600&q=80&auto=format&fit=crop"
+                     alt="Detalle de presas multicolor sobre muro"
+                     loading="lazy" decoding="async"
+                     width="600" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    Ver más
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item gallery__item--wide" aria-label="Salida a roca · Ver Instagram">
+                <img src="https://images.unsplash.com/photo-1593132517397-ceb31d77194a?w=900&q=80&auto=format&fit=crop"
+                     alt="Salida a roca con grupo de escaladores"
+                     loading="lazy" decoding="async"
+                     width="900" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    Ver más
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item" aria-label="Volumen amarillo del muro · Ver Instagram">
+                <img src="https://images.unsplash.com/photo-1696105538708-6be6c90707a1?w=600&q=80&auto=format&fit=crop"
+                     alt="Volumen amarillo del muro de escalada"
+                     loading="lazy" decoding="async"
+                     width="600" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    Ver más
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item" aria-label="Boulder al aire libre · Ver Instagram">
+                <img src="https://images.unsplash.com/photo-1522362485439-83fcff4673f0?w=600&q=80&auto=format&fit=crop"
+                     alt="Boulder al aire libre sobre roca"
+                     loading="lazy" decoding="async"
+                     width="600" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    Ver más
+                </span>
+            </a>
+        </div>
+
+        <div class="gallery__cta">
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="btn btn--ghost">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                Ver más en @murodeescaladagrip
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- ===== SCHEDULE ===== -->
 <section class="section section--dark" id="horarios" aria-labelledby="horarios-title">
     <div class="container grid grid--2">
@@ -793,6 +906,7 @@
                 <li><a href="#porque">¿Por qué GRIP?</a></li>
                 <li><a href="#precios">Precios</a></li>
                 <li><a href="#primera-vez">Tu primera vez</a></li>
+                <li><a href="#galeria">Galería</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </div>
