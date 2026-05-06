@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0B0E13" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FAFBFC" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function(){
+            try {
+                var stored = localStorage.getItem('grip-theme');
+                var system = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                var theme = stored || system;
+                if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+            } catch(e) {}
+        })();
+    </script>
+
+    <title>GRIP Climbing Club | Climbing Gym in Calarcá, Quindío · Coffee Region, Colombia</title>
+    <meta name="description" content="GRIP Climbing Club: the climbing gym of Calarcá, Quindío. Indoor bouldering, top-rope, beginner classes, and personal training in Colombia's Coffee Region. Welcoming locals and travelers from Armenia, Salento, Filandia and the entire Coffee Triangle.">
+    <meta name="keywords" content="climbing gym Colombia, climbing Calarcá, climbing Quindío, bouldering Colombia, indoor climbing Coffee Region, climbing gym Armenia Colombia, rock climbing Salento, climbing class Colombia, climbing for travelers Colombia, climbing gym Eje Cafetero, things to do Quindío Colombia, adventure activities Coffee Triangle">
+    <meta name="author" content="GRIP Climbing Club">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="geo.region" content="CO-QUI">
+    <meta name="geo.placename" content="Calarcá, Quindío, Colombia">
+    <meta name="geo.position" content="4.5239;-75.6447">
+    <meta name="ICBM" content="4.5239, -75.6447">
+    <link rel="canonical" href="https://droko1982.github.io/grip-climbing-club/en/">
+
+    <!-- Hreflang for international SEO -->
+    <link rel="alternate" hreflang="es-CO" href="https://droko1982.github.io/grip-climbing-club/">
+    <link rel="alternate" hreflang="es" href="https://droko1982.github.io/grip-climbing-club/">
+    <link rel="alternate" hreflang="en" href="https://droko1982.github.io/grip-climbing-club/en/">
+    <link rel="alternate" hreflang="x-default" href="https://droko1982.github.io/grip-climbing-club/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_CO">
+    <meta property="og:url" content="https://droko1982.github.io/grip-climbing-club/en/">
+    <meta property="og:title" content="GRIP Climbing Club | Climbing Gym in Calarcá, Quindío">
+    <meta property="og:description" content="Indoor climbing gym in the heart of Colombia's Coffee Region. Bouldering, top-rope, beginner classes for locals and travelers.">
+    <meta property="og:image" content="https://droko1982.github.io/grip-climbing-club/assets/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="GRIP Climbing Club">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GRIP Climbing Club | Climbing Gym in Calarcá, Quindío">
+    <meta name="twitter:description" content="Indoor climbing gym in the heart of Colombia's Coffee Region.">
+    <meta name="twitter:image" content="https://droko1982.github.io/grip-climbing-club/assets/og-image.svg">
+
+    <!-- Icons & Manifest -->
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="apple-touch-icon" href="../assets/favicon.svg">
+    <link rel="manifest" href="../site.webmanifest">
+
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://www.instagram.com">
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- JSON-LD: SportsActivityLocation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "@id": "https://droko1982.github.io/grip-climbing-club/#organization",
+      "name": "GRIP Climbing Club",
+      "alternateName": ["Muro de Escalada GRIP", "GRIP Calarcá"],
+      "description": "Indoor climbing gym in Calarcá, Quindío, Colombia. Bouldering, top-rope, beginner classes and personal training in the Coffee Region.",
+      "inLanguage": ["en", "es"],
+      "url": "https://droko1982.github.io/grip-climbing-club/en/",
+      "image": "https://droko1982.github.io/grip-climbing-club/assets/og-image.svg",
+      "logo": "https://droko1982.github.io/grip-climbing-club/assets/logo.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Calarcá",
+        "addressRegion": "Quindío",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 4.5239,
+        "longitude": -75.6447
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Calarcá" },
+        { "@type": "City", "name": "Armenia" },
+        { "@type": "City", "name": "Montenegro" },
+        { "@type": "City", "name": "Quimbaya" },
+        { "@type": "City", "name": "Circasia" },
+        { "@type": "City", "name": "La Tebaida" },
+        { "@type": "City", "name": "Salento" },
+        { "@type": "City", "name": "Filandia" },
+        { "@type": "City", "name": "Pijao" },
+        { "@type": "City", "name": "Génova" },
+        { "@type": "City", "name": "Buenavista" },
+        { "@type": "City", "name": "Córdoba" },
+        { "@type": "AdministrativeArea", "name": "Quindío" },
+        { "@type": "AdministrativeArea", "name": "Coffee Region, Colombia" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "15:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "14:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": ["https://www.instagram.com/murodeescaladagrip"],
+      "hasMap": "https://maps.app.goo.gl/XomwvZX1Xtsj72qs8",
+      "sport": "Climbing",
+      "priceRange": "$$",
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Safety equipment included", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Certified instructors", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Beginner-friendly", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Family-friendly", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "English-speaking staff", "value": true }
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need previous climbing experience?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. GRIP Climbing Club is designed for all levels. If it's your first time, our instructors will teach you safety techniques and basic movement before you go on the wall."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I bring on my first visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Just comfortable clothes that allow you to move (sweatpants, leggings or shorts) and a pair of socks. We provide climbing shoes and all safety equipment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum age?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We welcome climbers from age 6 and up. For minors, we require guardian authorization. We have special programs for kids and schools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to book or can I just walk in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can walk in during opening hours. If you're coming as a group, for the first time, or want a class, we recommend messaging us on Instagram (@murodeescaladagrip) to secure your spot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a climbing session last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A typical session lasts 1.5 to 2 hours. That's enough time to warm up, climb several routes and rest between attempts without getting exhausted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it far from Armenia and other towns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calarcá is just 10 minutes from Armenia and well-connected to the rest of Quindío. We welcome climbers from Armenia, Salento, Montenegro, La Tebaida, Circasia, Quimbaya, Filandia and the entire Coffee Region."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is indoor climbing dangerous?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indoor climbing is very safe when protocols are followed. At GRIP we use high-density mats for bouldering, certified ropes for top-rope, and equipment is regularly inspected. Instructors supervise beginners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have English-speaking staff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We can help travelers and tourists in English. Just message us beforehand on Instagram (@murodeescaladagrip) and we'll make sure you have a great experience."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ===== TOP TICKER ===== -->
+<div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+        <span>🧗 Calarcá, Quindío</span><span>·</span>
+        <span>📅 Mon–Fri 3PM–9PM · Sat 2PM–6PM</span><span>·</span>
+        <span>🏔️ All levels welcome</span><span>·</span>
+        <span>📷 @murodeescaladagrip</span><span>·</span>
+        <span>🌎 Coffee Region of Colombia</span><span>·</span>
+        <span>🧗 Calarcá, Quindío</span><span>·</span>
+        <span>📅 Mon–Fri 3PM–9PM · Sat 2PM–6PM</span><span>·</span>
+        <span>🏔️ All levels welcome</span><span>·</span>
+        <span>📷 @murodeescaladagrip</span><span>·</span>
+        <span>🌎 Coffee Region of Colombia</span><span>·</span>
+    </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+        <a href="#inicio" class="nav__brand" aria-label="GRIP Climbing Club — Home">
+            <span class="nav__logo" aria-hidden="true">
+                <svg viewBox="0 0 64 64" width="40" height="40">
+                    <polygon points="8,52 22,28 36,52" fill="#FF6B35"/>
+                    <polygon points="22,52 36,20 50,52" fill="#FFD23F"/>
+                    <polygon points="36,52 46,32 56,52" fill="#06A77D"/>
+                    <polygon points="14,52 24,40 32,52" fill="#1B85B8"/>
+                    <polygon points="32,52 40,42 48,52" fill="#D7263D"/>
+                </svg>
+            </span>
+            <span class="nav__brandtext">
+                <strong>GRIP</strong>
+                <small>CLIMBING CLUB</small>
+            </span>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav__menu" id="navMenu" aria-label="Main">
+            <a href="#sobre">About</a>
+            <a href="#servicios">Services</a>
+            <a href="#porque">Why GRIP?</a>
+            <a href="#precios">Pricing</a>
+            <a href="#primera-vez">Your first visit</a>
+            <a href="#galeria">Gallery</a>
+            <a href="#horarios">Hours</a>
+            <a href="#ubicacion">Location</a>
+            <a href="#faq">FAQ</a>
+            <div class="nav__tools">
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" type="button">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+                <a href="../" class="lang-btn" aria-label="Cambiar a Español" hreflang="es-CO">ES</a>
+                <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="nav__cta">Book</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <div class="hero__glow hero__glow--3"></div>
+    </div>
+
+    <div class="container hero__inner">
+        <div class="hero__content">
+            <span class="hero__eyebrow">
+                <span class="dot"></span>
+                Calarcá · Quindío · Coffee Region, Colombia
+            </span>
+            <h1 class="hero__title" id="hero-title">
+                Climb. <span class="text-gradient">Train.</span><br>
+                Conquer.
+            </h1>
+            <p class="hero__subtitle">
+                The first and best <strong>climbing gym</strong> in Calarcá. A space designed to train, learn, and live the passion for climbing — for beginners, intermediate and advanced climbers from across Quindío and visitors to Colombia's Coffee Region.
+            </p>
+            <div class="hero__cta">
+                <a href="#primera-vez" class="btn btn--primary">
+                    Book your first visit
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a href="https://maps.app.goo.gl/XomwvZX1Xtsj72qs8" target="_blank" rel="noopener" class="btn btn--ghost">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Get directions
+                </a>
+            </div>
+            <div class="hero__stats">
+                <div>
+                    <strong data-counter="450" data-suffix="+">0</strong>
+                    <span>Climbing community</span>
+                </div>
+                <div>
+                    <strong data-counter="6">0</strong>
+                    <span>Days a week</span>
+                </div>
+                <div>
+                    <strong>All</strong>
+                    <span>Levels welcome</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div class="hero__photo hero__photo--secondary" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1696105539018-a73a53770934?w=600&q=80&auto=format&fit=crop"
+                     alt=""
+                     loading="eager"
+                     decoding="async"
+                     width="400" height="500">
+            </div>
+            <div class="hero__photo hero__photo--main">
+                <img src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=900&q=85&auto=format&fit=crop"
+                     srcset="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=500&q=80&auto=format&fit=crop 500w,
+                             https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=900&q=85&auto=format&fit=crop 900w,
+                             https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=1300&q=85&auto=format&fit=crop 1300w"
+                     sizes="(max-width: 720px) 90vw, 480px"
+                     alt="Climber on a bouldering wall with colorful holds at GRIP Climbing Club"
+                     loading="eager"
+                     fetchpriority="high"
+                     decoding="async"
+                     width="900" height="1100">
+                <div class="hero__photo-overlay" aria-hidden="true"></div>
+                <span class="hero__photo-tag">
+                    <span class="dot"></span>
+                    Climbing in action
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <a href="#sobre" class="hero__scroll" aria-label="Scroll down">
+        <span></span>
+    </a>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section section--about" id="sobre" aria-labelledby="sobre-title">
+    <div class="container grid grid--2">
+        <div class="section__visual">
+            <div class="card-stack">
+                <div class="card-stack__item card-stack__item--1">
+                    <img src="https://images.unsplash.com/photo-1689775884478-9ed19b79d659?w=500&q=80&auto=format&fit=crop"
+                         alt="Bouldering on colorful holds"
+                         loading="lazy" decoding="async"
+                         width="400" height="500">
+                    <div class="card-stack__caption">
+                        <p>Bouldering</p>
+                        <small>No ropes</small>
+                    </div>
+                </div>
+                <div class="card-stack__item card-stack__item--2">
+                    <img src="https://images.unsplash.com/photo-1696105538782-7815474f28e0?w=500&q=80&auto=format&fit=crop"
+                         alt="Climber training on wall volumes"
+                         loading="lazy" decoding="async"
+                         width="400" height="500">
+                    <div class="card-stack__caption">
+                        <p>Top-Rope</p>
+                        <small>With ropes</small>
+                    </div>
+                </div>
+                <div class="card-stack__item card-stack__item--3">
+                    <img src="https://images.unsplash.com/photo-1659666287295-7da26c3f80d4?w=500&q=80&auto=format&fit=crop"
+                         alt="Climbing wall with multicolored holds"
+                         loading="lazy" decoding="async"
+                         width="400" height="500">
+                    <div class="card-stack__caption">
+                        <p>Training</p>
+                        <small>Strength · technique</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section__text">
+            <span class="section__eyebrow">About Us</span>
+            <h2 class="section__title" id="sobre-title">
+                A space to <span class="text-gradient">train and learn</span>
+            </h2>
+            <p class="section__lead">
+                At <strong>GRIP Climbing Club</strong> we believe climbing is more than a sport: it's discipline, community, and adventure. That's why we built a gym for every level — from someone touching a hold for the first time to experienced climbers chasing their next project.
+            </p>
+            <p>
+                It doesn't matter if you're from Calarcá, Armenia, Salento or just passing through the Coffee Region. Everyone is welcome in our community.
+            </p>
+            <ul class="feature-list">
+                <li><span>✦</span> Routes refreshed regularly for every level.</li>
+                <li><span>✦</span> Experienced instructors and a welcoming community.</li>
+                <li><span>✦</span> Inspected safety equipment available.</li>
+                <li><span>✦</span> Perfect spot to train after work or class.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section section--dark" id="servicios" aria-labelledby="servicios-title">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Services</span>
+            <h2 class="section__title" id="servicios-title">Everything you need to climb</h2>
+            <p class="section__lead">From your first class to your next project. At GRIP you'll find a space designed for you.</p>
+        </div>
+        <div class="services">
+            <article class="service">
+                <div class="service__icon">🧗‍♂️</div>
+                <h3>Open Climbing</h3>
+                <p>Use the wall at your own pace. Routes range from beginner to advanced.</p>
+                <span class="service__tag">All levels</span>
+            </article>
+            <article class="service">
+                <div class="service__icon">📚</div>
+                <h3>Beginner Classes</h3>
+                <p>First time? We'll teach you basic technique, safety and how to read a route.</p>
+                <span class="service__tag">Intro</span>
+            </article>
+            <article class="service">
+                <div class="service__icon">🎯</div>
+                <h3>Personal Training</h3>
+                <p>Improve technique and strength with plans tailored to your level and goals.</p>
+                <span class="service__tag">Intermediate · Advanced</span>
+            </article>
+            <article class="service">
+                <div class="service__icon">🪨</div>
+                <h3>Outdoor Trips</h3>
+                <p>Connect with nature. We organize trips to the best rock crags in the country.</p>
+                <span class="service__tag">Community</span>
+            </article>
+            <article class="service">
+                <div class="service__icon">🎉</div>
+                <h3>Birthdays & Events</h3>
+                <p>Host your birthday or company event in a unique, memorable setting.</p>
+                <span class="service__tag">Groups</span>
+            </article>
+            <article class="service">
+                <div class="service__icon">👥</div>
+                <h3>Schools & Companies</h3>
+                <p>Programs for groups across Quindío. Fun, teamwork and personal growth.</p>
+                <span class="service__tag">Programs</span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY GRIP ===== -->
+<section class="section section--why" id="porque" aria-labelledby="porque-title">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Why GRIP?</span>
+            <h2 class="section__title" id="porque-title">
+                The <span class="text-gradient">only climbing gym</span> in Calarcá
+            </h2>
+            <p class="section__lead">We're not a regular gym. We're a club, a community, a place where the passion for climbing is cultivated every day.</p>
+        </div>
+        <div class="why-grid">
+            <article class="why">
+                <span class="why__num">01</span>
+                <h3>Real community</h3>
+                <p>Over 450 climbers who support each other, share projects and celebrate every win.</p>
+            </article>
+            <article class="why">
+                <span class="why__num">02</span>
+                <h3>Fresh routes</h3>
+                <p>We rotate routes regularly so there's always a new challenge to figure out.</p>
+            </article>
+            <article class="why">
+                <span class="why__num">03</span>
+                <h3>Safety first</h3>
+                <p>Certified equipment, high-density mats, and supervision for beginners.</p>
+            </article>
+            <article class="why">
+                <span class="why__num">04</span>
+                <h3>For everyone</h3>
+                <p>From kids and beginners to advanced climbers working on their next project.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRICES ===== -->
+<section class="section section--prices" id="precios" aria-labelledby="precios-title">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Pricing</span>
+            <h2 class="section__title" id="precios-title">Plans for everyone</h2>
+            <p class="section__lead">Pick the plan that fits your pace. All include wall access and safety equipment.</p>
+        </div>
+
+        <div class="pricing">
+            <article class="pricing__card">
+                <header>
+                    <h3>Day Pass</h3>
+                    <p class="pricing__sub">One visit</p>
+                </header>
+                <div class="pricing__price">
+                    <span class="pricing__from">from</span>
+                    <strong>Ask us</strong>
+                </div>
+                <ul>
+                    <li>Full wall access</li>
+                    <li>Safety equipment included</li>
+                    <li>Initial guidance</li>
+                    <li>No commitment</li>
+                </ul>
+                <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="btn btn--ghost">More info</a>
+            </article>
+
+            <article class="pricing__card pricing__card--featured">
+                <span class="pricing__badge">Most popular</span>
+                <header>
+                    <h3>Monthly</h3>
+                    <p class="pricing__sub">Unlimited access for a month</p>
+                </header>
+                <div class="pricing__price">
+                    <span class="pricing__from">from</span>
+                    <strong>Ask us</strong>
+                </div>
+                <ul>
+                    <li>Unlimited wall access</li>
+                    <li>Safety equipment included</li>
+                    <li>Member-only events</li>
+                    <li>Full GRIP community</li>
+                    <li>Best price per session</li>
+                </ul>
+                <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="btn btn--primary">Sign me up</a>
+            </article>
+
+            <article class="pricing__card">
+                <header>
+                    <h3>Classes / Courses</h3>
+                    <p class="pricing__sub">Learn from scratch</p>
+                </header>
+                <div class="pricing__price">
+                    <span class="pricing__from">from</span>
+                    <strong>Ask us</strong>
+                </div>
+                <ul>
+                    <li>Experienced instructor</li>
+                    <li>Technique and safety</li>
+                    <li>For beginners</li>
+                    <li>Progressive plan</li>
+                </ul>
+                <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="btn btn--ghost">More info</a>
+            </article>
+        </div>
+
+        <p class="pricing__note">
+            💬 For up-to-date pricing, message us on
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener">Instagram</a>
+            or stop by the gym.
+        </p>
+    </div>
+</section>
+
+<!-- ===== FIRST VISIT ===== -->
+<section class="section" id="primera-vez" aria-labelledby="primera-vez-title">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Your first visit</span>
+            <h2 class="section__title" id="primera-vez-title">
+                What it's like to come to GRIP <span class="text-gradient">for the first time</span>
+            </h2>
+            <p class="section__lead">No need to know anything about climbing. Just bring the energy — we'll handle the rest.</p>
+        </div>
+
+        <ol class="steps">
+            <li class="step">
+                <div class="step__num">1</div>
+                <div>
+                    <h3>Message us on Instagram</h3>
+                    <p>Send a DM to <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener">@murodeescaladagrip</a> to reserve your spot and ask any questions.</p>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step__num">2</div>
+                <div>
+                    <h3>Come comfortable</h3>
+                    <p>Bring comfortable clothes (sweatpants, leggings, shorts) and socks. We provide climbing shoes and all safety gear.</p>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step__num">3</div>
+                <div>
+                    <h3>Initial briefing</h3>
+                    <p>An instructor walks you through the rules, basic technique, and how to use the equipment. Safety comes first.</p>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step__num">4</div>
+                <div>
+                    <h3>Start climbing!</h3>
+                    <p>Begin with easy routes, level up at your own pace. We promise you'll want to come back.</p>
+                </div>
+            </li>
+        </ol>
+
+        <div class="primera-vez__cta">
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+                Book my first visit
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="section section--gallery" id="galeria" aria-labelledby="galeria-title">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Gallery</span>
+            <h2 class="section__title" id="galeria-title">
+                The wall <span class="text-gradient">in action</span>
+            </h2>
+            <p class="section__lead">Images that capture the climbing experience. For real photos of our gym, follow us at <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener">@murodeescaladagrip</a>.</p>
+        </div>
+
+        <div class="gallery">
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item gallery__item--lg" aria-label="View on Instagram">
+                <img src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=900&q=80&auto=format&fit=crop"
+                     alt="Climber on bouldering wall"
+                     loading="lazy" decoding="async"
+                     width="900" height="1100">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    See more
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item" aria-label="View on Instagram">
+                <img src="https://images.unsplash.com/photo-1659666287295-7da26c3f80d4?w=600&q=80&auto=format&fit=crop"
+                     alt="Climbing wall with many colorful holds"
+                     loading="lazy" decoding="async"
+                     width="600" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    See more
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item" aria-label="View on Instagram">
+                <img src="https://images.unsplash.com/photo-1517599652-86163851f0de?w=600&q=80&auto=format&fit=crop"
+                     alt="Close-up of multicolored holds on a climbing wall"
+                     loading="lazy" decoding="async"
+                     width="600" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    See more
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item gallery__item--wide" aria-label="View on Instagram">
+                <img src="https://images.unsplash.com/photo-1593132517397-ceb31d77194a?w=900&q=80&auto=format&fit=crop"
+                     alt="Outdoor bouldering with friends"
+                     loading="lazy" decoding="async"
+                     width="900" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    See more
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item" aria-label="View on Instagram">
+                <img src="https://images.unsplash.com/photo-1696105538708-6be6c90707a1?w=600&q=80&auto=format&fit=crop"
+                     alt="Yellow volume on the climbing wall"
+                     loading="lazy" decoding="async"
+                     width="600" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    See more
+                </span>
+            </a>
+
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="gallery__item" aria-label="View on Instagram">
+                <img src="https://images.unsplash.com/photo-1522362485439-83fcff4673f0?w=600&q=80&auto=format&fit=crop"
+                     alt="Outdoor bouldering on a rock"
+                     loading="lazy" decoding="async"
+                     width="600" height="600">
+                <span class="gallery__overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    See more
+                </span>
+            </a>
+        </div>
+
+        <div class="gallery__cta">
+            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="btn btn--ghost">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                See more on @murodeescaladagrip
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SCHEDULE ===== -->
+<section class="section section--dark" id="horarios" aria-labelledby="horarios-title">
+    <div class="container grid grid--2">
+        <div class="section__text">
+            <span class="section__eyebrow">Hours</span>
+            <h2 class="section__title" id="horarios-title">When are we open?</h2>
+            <p class="section__lead">We're ready to welcome you Monday through Saturday. Drop by anytime — the wall is yours.</p>
+            <p>Whether you're coming from Armenia, Salento, Montenegro, Circasia, La Tebaida, Quimbaya, Filandia or anywhere in the Coffee Region — you're more than welcome!</p>
+            <p class="schedule__hint">
+                💡 The best time for beginners tends to be 3PM–6PM, when the wall is less crowded.
+            </p>
+        </div>
+        <div class="schedule">
+            <div class="schedule__item">
+                <span class="schedule__day">Monday</span>
+                <span class="schedule__time">3:00 PM — 9:00 PM</span>
+            </div>
+            <div class="schedule__item">
+                <span class="schedule__day">Tuesday</span>
+                <span class="schedule__time">3:00 PM — 9:00 PM</span>
+            </div>
+            <div class="schedule__item">
+                <span class="schedule__day">Wednesday</span>
+                <span class="schedule__time">3:00 PM — 9:00 PM</span>
+            </div>
+            <div class="schedule__item">
+                <span class="schedule__day">Thursday</span>
+                <span class="schedule__time">3:00 PM — 9:00 PM</span>
+            </div>
+            <div class="schedule__item">
+                <span class="schedule__day">Friday</span>
+                <span class="schedule__time">3:00 PM — 9:00 PM</span>
+            </div>
+            <div class="schedule__item schedule__item--highlight">
+                <span class="schedule__day">Saturday</span>
+                <span class="schedule__time">2:00 PM — 6:00 PM</span>
+            </div>
+            <div class="schedule__item schedule__item--closed">
+                <span class="schedule__day">Sunday</span>
+                <span class="schedule__time">Closed</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="section section--location" id="ubicacion" aria-labelledby="ubicacion-title">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Location</span>
+            <h2 class="section__title" id="ubicacion-title">
+                Find us in <span class="text-gradient">Calarcá, Quindío</span>
+            </h2>
+            <p class="section__lead">We serve the entire Coffee Region. A few minutes from Armenia and the main towns of the department.</p>
+        </div>
+
+        <div class="location">
+            <div class="location__map">
+                <iframe
+                    src="https://www.google.com/maps?q=Calarc%C3%A1%2C+Quind%C3%ADo%2C+Colombia&output=embed"
+                    width="100%"
+                    height="500"
+                    style="border:0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Map of GRIP Climbing Club location in Calarcá, Quindío"></iframe>
+            </div>
+            <div class="location__info">
+                <h3>📍 Calarcá, Quindío</h3>
+                <p>We're in the heart of Colombia's Coffee Region, easily accessible from anywhere in the area.</p>
+
+                <a href="https://maps.app.goo.gl/XomwvZX1Xtsj72qs8" target="_blank" rel="noopener" class="btn btn--primary">
+                    Open in Google Maps
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </a>
+
+                <div class="distances">
+                    <p class="distances__title">Approximate distances</p>
+                    <ul>
+                        <li><strong>Armenia</strong><span>~10 min</span></li>
+                        <li><strong>La Tebaida</strong><span>~20 min</span></li>
+                        <li><strong>Montenegro</strong><span>~25 min</span></li>
+                        <li><strong>Circasia</strong><span>~25 min</span></li>
+                        <li><strong>Salento</strong><span>~35 min</span></li>
+                        <li><strong>Quimbaya</strong><span>~35 min</span></li>
+                    </ul>
+                </div>
+
+                <div class="cities">
+                    <p class="cities__title">We welcome climbers from</p>
+                    <ul>
+                        <li>Armenia</li><li>Calarcá</li><li>Montenegro</li>
+                        <li>Quimbaya</li><li>Circasia</li><li>La Tebaida</li>
+                        <li>Salento</li><li>Filandia</li><li>Pijao</li>
+                        <li>Génova</li><li>Buenavista</li><li>Córdoba</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">FAQ</span>
+            <h2 class="section__title" id="faq-title">Frequently asked questions</h2>
+            <p class="section__lead">The most common questions from people climbing at GRIP for the first time.</p>
+        </div>
+
+        <div class="faq">
+            <details class="faq__item">
+                <summary>Do I need previous climbing experience?</summary>
+                <div class="faq__body">
+                    <p>No. GRIP Climbing Club is designed for all levels. If it's your first time, our instructors will teach you safety techniques and basic movement before you go on the wall.</p>
+                </div>
+            </details>
+            <details class="faq__item">
+                <summary>What should I bring on my first visit?</summary>
+                <div class="faq__body">
+                    <p>Just <strong>comfortable clothes</strong> that allow you to move (sweatpants, leggings or shorts) and a pair of socks. We provide <strong>climbing shoes</strong> and all safety equipment.</p>
+                </div>
+            </details>
+            <details class="faq__item">
+                <summary>What is the minimum age?</summary>
+                <div class="faq__body">
+                    <p>We welcome climbers from age 6 and up. For minors, we require guardian authorization. We have special programs for kids and schools.</p>
+                </div>
+            </details>
+            <details class="faq__item">
+                <summary>Do I need to book or can I just walk in?</summary>
+                <div class="faq__body">
+                    <p>You can walk in during opening hours. If you're coming as a group, for the first time, or want a class, we recommend messaging us on <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener">Instagram</a> to secure your spot.</p>
+                </div>
+            </details>
+            <details class="faq__item">
+                <summary>How long does a climbing session last?</summary>
+                <div class="faq__body">
+                    <p>A typical session lasts <strong>1.5 to 2 hours</strong>. That's enough time to warm up, climb several routes and rest between attempts without getting exhausted.</p>
+                </div>
+            </details>
+            <details class="faq__item">
+                <summary>Is it far from Armenia and other towns?</summary>
+                <div class="faq__body">
+                    <p>Calarcá is just <strong>10 minutes from Armenia</strong> and well-connected to the rest of Quindío. We welcome climbers from Armenia, Salento, Montenegro, La Tebaida, Circasia, Quimbaya, Filandia and the entire Coffee Region.</p>
+                </div>
+            </details>
+            <details class="faq__item">
+                <summary>Is indoor climbing dangerous?</summary>
+                <div class="faq__body">
+                    <p>Indoor climbing is very safe when protocols are followed. At GRIP we use high-density mats for bouldering, certified ropes for top-rope, and equipment is regularly inspected. Instructors supervise beginners.</p>
+                </div>
+            </details>
+            <details class="faq__item">
+                <summary>Do you have English-speaking staff?</summary>
+                <div class="faq__body">
+                    <p>Yes — we can help travelers and tourists in <strong>English</strong>. Just message us beforehand on <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener">Instagram</a> and we'll make sure you have a great experience.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section section--cta" id="contacto" aria-labelledby="cta-title">
+    <div class="container">
+        <div class="cta">
+            <span class="section__eyebrow">Contact</span>
+            <h2 id="cta-title">Ready for your first climb?</h2>
+            <p>Follow us on Instagram for updates, events, and to message us directly. We respond fast and answer every question.</p>
+            <div class="cta__actions">
+                <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    @murodeescaladagrip
+                </a>
+                <a href="https://maps.app.goo.gl/XomwvZX1Xtsj72qs8" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Get directions
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+        <div class="footer__col footer__col--brand">
+            <div class="footer__brand">
+                <span class="nav__logo">
+                    <svg viewBox="0 0 64 64" width="48" height="48">
+                        <polygon points="8,52 22,28 36,52" fill="#FF6B35"/>
+                        <polygon points="22,52 36,20 50,52" fill="#FFD23F"/>
+                        <polygon points="36,52 46,32 56,52" fill="#06A77D"/>
+                        <polygon points="14,52 24,40 32,52" fill="#1B85B8"/>
+                        <polygon points="32,52 40,42 48,52" fill="#D7263D"/>
+                    </svg>
+                </span>
+                <div>
+                    <strong>GRIP Climbing Club</strong>
+                    <p>Climbing gym · Calarcá, Quindío</p>
+                </div>
+            </div>
+            <p class="footer__about">The first and best climbing gym in Quindío. Community, technique, and adventure for every level.</p>
+        </div>
+
+        <div class="footer__col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="#sobre">About Us</a></li>
+                <li><a href="#servicios">Services</a></li>
+                <li><a href="#porque">Why GRIP?</a></li>
+                <li><a href="#precios">Pricing</a></li>
+                <li><a href="#primera-vez">Your first visit</a></li>
+                <li><a href="#galeria">Gallery</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__col">
+            <h4>Hours</h4>
+            <ul class="footer__schedule">
+                <li><span>Mon–Fri</span><span>3PM–9PM</span></li>
+                <li><span>Saturday</span><span>2PM–6PM</span></li>
+                <li><span>Sunday</span><span>Closed</span></li>
+            </ul>
+        </div>
+
+        <div class="footer__col">
+            <h4>Contact</h4>
+            <ul class="footer__contact">
+                <li>📍 Calarcá, Quindío</li>
+                <li>📷 <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener">@murodeescaladagrip</a></li>
+                <li>🗺️ <a href="https://maps.app.goo.gl/XomwvZX1Xtsj72qs8" target="_blank" rel="noopener">Google Maps</a></li>
+            </ul>
+            <div class="footer__social">
+                <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="https://maps.app.goo.gl/XomwvZX1Xtsj72qs8" target="_blank" rel="noopener" aria-label="Google Maps">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="container">
+            <p>© <span id="year"></span> GRIP Climbing Club · Calarcá, Quindío · All rights reserved.</p>
+            <p class="footer__credit">Serving the entire Coffee Region of Colombia.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Instagram CTA -->
+<a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="float-cta" aria-label="Message us on Instagram">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    <span>Message us</span>
+</a>
+
+<script src="../script.js" defer></script>
+</body>
+</html>

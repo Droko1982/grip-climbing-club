@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0B0E13">
-    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0B0E13" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FAFBFC" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function(){
+            try {
+                var stored = localStorage.getItem('grip-theme');
+                var system = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                var theme = stored || system;
+                if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+            } catch(e) {}
+        })();
+    </script>
 
     <title>GRIP Climbing Club | Muro de Escalada en Calarcá, Quindío · Eje Cafetero</title>
     <meta name="description" content="GRIP Climbing Club: el muro de escalada de Calarcá, Quindío. Gimnasio para entrenar, aprender y vivir la escalada — boulder, top-rope, clases para principiantes y entrenamiento personalizado. Atendemos toda la región: Armenia, Salento, Montenegro, La Tebaida y todo el Eje Cafetero.">
@@ -17,6 +30,12 @@
     <meta name="geo.position" content="4.5239;-75.6447">
     <meta name="ICBM" content="4.5239, -75.6447">
     <link rel="canonical" href="https://droko1982.github.io/grip-climbing-club/">
+
+    <!-- Hreflang for international SEO -->
+    <link rel="alternate" hreflang="es-CO" href="https://droko1982.github.io/grip-climbing-club/">
+    <link rel="alternate" hreflang="es" href="https://droko1982.github.io/grip-climbing-club/">
+    <link rel="alternate" hreflang="en" href="https://droko1982.github.io/grip-climbing-club/en/">
+    <link rel="alternate" hreflang="x-default" href="https://droko1982.github.io/grip-climbing-club/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -244,7 +263,14 @@
             <a href="#horarios">Horarios</a>
             <a href="#ubicacion">Ubicación</a>
             <a href="#faq">FAQ</a>
-            <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="nav__cta">Reservar</a>
+            <div class="nav__tools">
+                <button class="icon-btn" id="themeToggle" aria-label="Cambiar tema" type="button">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+                <a href="en/" class="lang-btn" aria-label="Switch to English" hreflang="en">EN</a>
+                <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="nav__cta">Reservar</a>
+            </div>
         </nav>
     </div>
 </header>
