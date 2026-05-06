@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — GRIP Climbing Club</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .nf {
+            max-width: 540px;
+        }
+        .nf__num {
+            font-family: var(--font-display);
+            font-size: clamp(120px, 25vw, 220px);
+            line-height: 1;
+            background: linear-gradient(90deg, var(--orange), var(--yellow), var(--red));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+        }
+        .nf h1 {
+            font-family: var(--font-display);
+            font-size: clamp(28px, 5vw, 44px);
+            letter-spacing: .04em;
+            margin-bottom: 14px;
+        }
+        .nf p {
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nf">
+        <div class="nf__num">404</div>
+        <h1>Te caíste de la ruta</h1>
+        <p>La página que buscas no existe o se movió. Vuelve al inicio y sigue escalando.</p>
+        <a href="/grip-climbing-club/" class="btn btn--primary">Volver al inicio</a>
+    </div>
+</body>
+</html>
