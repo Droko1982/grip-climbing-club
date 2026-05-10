@@ -49,19 +49,43 @@
         });
     }
 
-    /* ----- Scroll-aware nav ----- */
-    let lastScroll = 0;
+    /* ----- Scroll-aware nav + floating CTAs + parallax ----- */
+    const floatCta = $('.float-cta');
+    const bottomBar = $('#bottomBar');
+    const parallaxLayers = $$('.parallax-strip__bg, .stats-showcase__bg');
+    const footer = $('.footer');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     const onScroll = () => {
         const y = window.scrollY;
         if (nav) nav.classList.toggle('scrolled', y > 30);
 
-        // Floating CTA: show after scrolling past hero
-        const floatCta = $('.float-cta');
-        if (floatCta) floatCta.classList.toggle('show', y > 600);
+        // Floating CTA: show after scrolling past hero, hide near footer
+        const nearFooter = footer && (window.innerHeight + y) > (footer.offsetTop - 60);
+        if (floatCta) floatCta.classList.toggle('show', y > 600 && !nearFooter);
+        if (bottomBar) bottomBar.classList.toggle('show', y > 500 && !nearFooter);
 
-        lastScroll = y;
+        // Subtle parallax — only when section is in viewport
+        if (!reduceMotion && parallaxLayers.length) {
+            parallaxLayers.forEach(layer => {
+                const section = layer.parentElement;
+                if (!section) return;
+                const rect = section.getBoundingClientRect();
+                if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+                const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+                const translate = (progress - 0.5) * 80; // px
+                layer.style.transform = `translate3d(0, ${translate.toFixed(1)}px, 0)`;
+            });
+        }
     };
-    window.addEventListener('scroll', onScroll, { passive: true });
+    let scrollTicking = false;
+    const scheduleScroll = () => {
+        if (scrollTicking) return;
+        scrollTicking = true;
+        requestAnimationFrame(() => { onScroll(); scrollTicking = false; });
+    };
+    window.addEventListener('scroll', scheduleScroll, { passive: true });
+    window.addEventListener('resize', scheduleScroll, { passive: true });
     onScroll();
 
     /* ----- Footer year ----- */
@@ -89,7 +113,7 @@
     };
 
     /* ----- Reveal-on-scroll ----- */
-    const revealTargets = $$('.section__head, .section__text, .section__visual, .service, .pricing__card, .schedule, .location, .cta, .why, .step, .faq__item, .hero__content, .hero__visual');
+    const revealTargets = $$('.section__head, .section__text, .section__visual, .service, .pricing__card, .schedule, .location, .cta, .why, .step, .faq__item, .hero__content, .hero__visual, .path, .stat-big, .colombia-card, .colombia-banner, .parallax-strip__content, .stats-showcase__head');
     revealTargets.forEach(el => el.classList.add('reveal'));
 
     const counterTargets = $$('[data-counter]');
