@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://droko1982.github.io/grip-climbing-club/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es-CO" href="https://droko1982.github.io/grip-climbing-club/"/>
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://droko1982.github.io/grip-climbing-club/en/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="es-CO" href="https://droko1982.github.io/grip-climbing-club/"/>
@@ -23,32 +23,37 @@
   </url>
   <url>
     <loc>https://droko1982.github.io/grip-climbing-club/#servicios</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://droko1982.github.io/grip-climbing-club/#precios</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://droko1982.github.io/grip-climbing-club/#primera-vez</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://droko1982.github.io/grip-climbing-club/#colombia</loc>
+    <lastmod>2026-05-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://droko1982.github.io/grip-climbing-club/#galeria</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://droko1982.github.io/grip-climbing-club/#ubicacion</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://droko1982.github.io/grip-climbing-club/#faq</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-10</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
