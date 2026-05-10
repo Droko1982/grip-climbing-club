@@ -12,11 +12,11 @@
 
     /* ----- i18n strings ----- */
     const T = isES ? {
-        openClosesAt:   (h) => `Abierto · cierra a las ${h}`,
+        openClosesAt:   (h) => `Abierto · cierra ${h}`,
         closedOpensAt:  (label) => `Cerrado · ${label}`,
-        opensTodayAt:   (h) => `abre hoy a las ${h}`,
-        opensTomorrow:  (h) => `abre mañana a las ${h}`,
-        opensMonday:    (h) => `abre lunes a las ${h}`,
+        opensTodayAt:   (h) => `abre hoy ${h}`,
+        opensTomorrow:  (h) => `mañana ${h}`,
+        opensMonday:    (h) => `lun ${h}`,
         tipLabel:       'Tip de hoy',
         achievement:    '🎯 Logro desbloqueado',
         sectionService: 'Conoces los servicios',
@@ -30,11 +30,11 @@
         holdWinCode:    'PRIMER-ASCENSO',
         holdWinNote:    '10% off en tu pase de día.'
     } : {
-        openClosesAt:   (h) => `Open · closes at ${h}`,
+        openClosesAt:   (h) => `Open · closes ${h}`,
         closedOpensAt:  (label) => `Closed · ${label}`,
-        opensTodayAt:   (h) => `opens today at ${h}`,
-        opensTomorrow:  (h) => `opens tomorrow at ${h}`,
-        opensMonday:    (h) => `opens Monday at ${h}`,
+        opensTodayAt:   (h) => `opens ${h}`,
+        opensTomorrow:  (h) => `tomorrow ${h}`,
+        opensMonday:    (h) => `mon ${h}`,
         tipLabel:       "Today's tip",
         achievement:    '🎯 Achievement unlocked',
         sectionService: 'You know our services',
@@ -94,6 +94,10 @@
         const target = parseInt(el.dataset.counter, 10);
         const suffix = el.dataset.suffix || '';
         if (Number.isNaN(target)) return;
+        if (reduceMotion) {
+            el.textContent = target + suffix;
+            return;
+        }
         const duration = 1600;
         const start = performance.now();
         const tick = (now) => {
@@ -183,21 +187,7 @@
         });
     });
 
-    /* ----- Climb Rail (scroll-driven climber on rope) ----- */
-    const rail = $('.climb-rail');
-    const railClimber = $('.climb-rail__climber');
-    const railGrades = $$('.climb-rail__grade');
-    if (rail && railClimber) {
-        // Position grades along the rope: V0 at top → V12 at bottom
-        const grades = ['V0','V2','V4','V6','V8','V10','V12'];
-        railGrades.forEach((el, i) => {
-            const t = i / (railGrades.length - 1);
-            el.style.top = (t * 100) + '%';
-        });
-        requestAnimationFrame(() => rail.classList.add('ready'));
-    }
-
-    /* ----- Scroll-aware nav + floating CTAs + parallax + climber ----- */
+    /* ----- Scroll-aware nav + floating CTAs + parallax ----- */
     const floatCta   = $('.float-cta');
     const bottomBar  = $('#bottomBar');
     const parallaxLayers = $$('.parallax-strip__bg, .stats-showcase__bg');
@@ -205,27 +195,12 @@
 
     const onScroll = () => {
         const y = window.scrollY;
-        const docH = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = docH > 0 ? Math.min(y / docH, 1) : 0;
 
         if (nav) nav.classList.toggle('scrolled', y > 30);
 
         const nearFooter = footer && (window.innerHeight + y) > (footer.offsetTop - 60);
         if (floatCta)  floatCta.classList.toggle('show', y > 600 && !nearFooter);
         if (bottomBar) bottomBar.classList.toggle('show', y > 500 && !nearFooter);
-
-        // Climber descent (proportional to scroll progress)
-        if (railClimber && rail) {
-            const railH = rail.clientHeight - railClimber.clientHeight;
-            const offset = progress * railH;
-            railClimber.style.transform = `translate(-50%, ${offset.toFixed(1)}px)`;
-
-            // Mark passed grades
-            railGrades.forEach((el, i) => {
-                const t = i / (railGrades.length - 1);
-                el.classList.toggle('passed', progress >= t - 0.02);
-            });
-        }
 
         // Subtle parallax bgs
         if (!reduceMotion && parallaxLayers.length) {
