@@ -202,7 +202,6 @@
     const bottomBar  = $('#bottomBar');
     const parallaxLayers = $$('.parallax-strip__bg, .stats-showcase__bg');
     const footer     = $('.footer');
-    const routePath  = $('.route-line path');
 
     const onScroll = () => {
         const y = window.scrollY;
@@ -226,13 +225,6 @@
                 const t = i / (railGrades.length - 1);
                 el.classList.toggle('passed', progress >= t - 0.02);
             });
-        }
-
-        // Route line draw progress
-        if (routePath) {
-            const len = routePath.getTotalLength ? routePath.getTotalLength() : 4000;
-            routePath.style.setProperty('--len', len);
-            routePath.style.setProperty('--off', (len * (1 - progress)).toFixed(1));
         }
 
         // Subtle parallax bgs
@@ -336,25 +328,6 @@
     $$('.btn--primary, .nav__cta, .bottom-bar__btn--primary').forEach(btn => {
         btn.addEventListener('click', burstFromEvent);
     });
-
-    /* ----- Cursor chalk trail (sparse) ----- */
-    if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
-        let lastT = 0;
-        document.addEventListener('mousemove', (e) => {
-            const now = performance.now();
-            if (now - lastT < 60) return;            // throttle
-            // Only on chalkable zones
-            const t = e.target.closest('.hero, .hero__photo, .btn--primary, .nav__cta, .stat-big, .path, .pricing__card--featured, .gallery__item, .stats-showcase, .parallax-strip');
-            if (!t) return;
-            lastT = now;
-            const d = document.createElement('span');
-            d.className = 'cursor-chalk';
-            d.style.left = e.clientX + 'px';
-            d.style.top  = e.clientY + 'px';
-            document.body.appendChild(d);
-            setTimeout(() => d.remove(), 600);
-        }, { passive: true });
-    }
 
     /* ----- Toast helper ----- */
     const showToast = (html, opts = {}) => {
