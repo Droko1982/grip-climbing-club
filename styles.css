@@ -1907,8 +1907,8 @@ summary::-webkit-details-marker { display: none; }
     position: fixed;
     top: 90px;
     bottom: 110px;
-    right: 22px;
-    width: 56px;
+    right: 0;
+    width: 44px;
     z-index: 40;
     pointer-events: none;
     opacity: 0;
@@ -1947,13 +1947,13 @@ summary::-webkit-details-marker { display: none; }
 }
 .climb-rail__grade {
     position: absolute;
-    right: 16px;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: var(--font-display);
-    font-size: 11px;
-    letter-spacing: .08em;
+    font-size: 10px;
+    letter-spacing: .06em;
     color: var(--muted);
-    padding: 2px 6px;
+    padding: 2px 5px;
     background: var(--bg);
     border-radius: 4px;
     border: 1px solid var(--line);
