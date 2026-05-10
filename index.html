@@ -298,6 +298,10 @@
             <a href="#colombia">Colombia</a>
             <a href="#horarios">Visítanos</a>
             <div class="nav__tools">
+                <span class="status-pill status-pill--nav" data-status-pill data-state="closed" aria-live="polite">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span class="status-text">·</span>
+                </span>
                 <button class="icon-btn" id="themeToggle" aria-label="Cambiar tema" type="button">
                     <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                     <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
@@ -946,52 +950,22 @@
         <svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 3 Q3 9 6 16 Q10 22 18 18 Q22 12 17 6 Q12 1 8 3 Z" fill="#FFD23F"/></svg>
     </button>
     <div class="container">
-        <div class="section__head">
+        <div class="colombia-compact">
             <span class="section__eyebrow">Toda Colombia</span>
             <h2 class="section__title" id="colombia-title">
                 Escaladores de <span class="text-gradient">todo el país</span>
             </h2>
-            <p class="section__lead">GRIP es un punto de encuentro nacional. El Eje Cafetero está a pocas horas en carretera o vuelo de las principales ciudades de Colombia — y siempre vale la pena un detour para escalar con nosotros.</p>
-        </div>
-
-        <div class="colombia-grid">
-            <article class="colombia-card">
-                <div class="colombia-card__city">Bogotá</div>
-                <div class="colombia-card__meta"><span>Carretera</span><strong>~8 h</strong></div>
-                <div class="colombia-card__meta"><span>Vuelo + carro</span><strong>~2 h</strong></div>
-            </article>
-            <article class="colombia-card">
-                <div class="colombia-card__city">Medellín</div>
-                <div class="colombia-card__meta"><span>Carretera</span><strong>~5–6 h</strong></div>
-                <div class="colombia-card__meta"><span>Vuelo + carro</span><strong>~2 h</strong></div>
-            </article>
-            <article class="colombia-card">
-                <div class="colombia-card__city">Cali</div>
-                <div class="colombia-card__meta"><span>Carretera</span><strong>~4 h</strong></div>
-                <div class="colombia-card__meta"><span>Vuelo + carro</span><strong>~2 h</strong></div>
-            </article>
-            <article class="colombia-card colombia-card--highlight">
-                <div class="colombia-card__city">Pereira</div>
-                <div class="colombia-card__meta"><span>Carretera</span><strong>~1 h</strong></div>
-                <div class="colombia-card__meta"><span>Aeropuerto MDE/BOG</span><strong>directo</strong></div>
-            </article>
-            <article class="colombia-card">
-                <div class="colombia-card__city">Manizales</div>
-                <div class="colombia-card__meta"><span>Carretera</span><strong>~2 h</strong></div>
-                <div class="colombia-card__meta"><span>Vía Pereira</span><strong>cómoda</strong></div>
-            </article>
-            <article class="colombia-card">
-                <div class="colombia-card__city">Ibagué</div>
-                <div class="colombia-card__meta"><span>Carretera</span><strong>~3 h</strong></div>
-                <div class="colombia-card__meta"><span>Vía La Línea</span><strong>directa</strong></div>
-            </article>
-        </div>
-
-        <div class="colombia-banner">
-            <div class="colombia-banner__text">
-                <h3>¿Vienes de viaje al Eje Cafetero?</h3>
-                <p>Incluye una jornada en GRIP en tu itinerario. Te asesoramos con horarios, equipo y opciones de pase de día — la escalada como parte del viaje cafetero.</p>
-            </div>
+            <p class="section__lead">
+                Calarcá está bien conectada con el resto de Colombia. Si vienes de viaje al Eje Cafetero, una jornada en GRIP vale el detour.
+            </p>
+            <ul class="colombia-cities">
+                <li>Bogotá <strong>~8 h</strong></li>
+                <li>Medellín <strong>~5 h</strong></li>
+                <li>Cali <strong>~4 h</strong></li>
+                <li class="is-highlight">Pereira <strong>~1 h</strong></li>
+                <li>Manizales <strong>~2 h</strong></li>
+                <li>Ibagué <strong>~3 h</strong></li>
+            </ul>
             <a href="https://www.instagram.com/murodeescaladagrip" target="_blank" rel="noopener" class="btn btn--primary">
                 Coordinar mi visita
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>

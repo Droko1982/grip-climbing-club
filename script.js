@@ -111,7 +111,7 @@
     };
 
     /* ----- Reveal-on-scroll ----- */
-    const revealTargets = $$('.section__head, .section__text, .section__visual, .service, .pricing__card, .schedule, .location, .cta, .why, .step, .faq__item, .hero__content, .hero__visual, .path, .stat-big, .colombia-card, .colombia-banner, .parallax-strip__content, .stats-showcase__head');
+    const revealTargets = $$('.section__head, .section__text, .section__visual, .service, .pricing__card, .schedule, .location, .cta, .why, .step, .faq__item, .hero__content, .hero__visual, .path, .stat-big, .colombia-compact, .parallax-strip__content, .stats-showcase__head');
     revealTargets.forEach(el => el.classList.add('reveal'));
     const counterTargets = $$('[data-counter]');
 
